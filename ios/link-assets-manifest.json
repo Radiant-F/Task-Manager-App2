@@ -1,0 +1,201 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/HelveticaBlkIt.ttf",
+      "sha1": "378f346d6b1fce8492ea85b371764531141b2006"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-Black.otf",
+      "sha1": "3baa8a1ef8181e2a40f5271e0819c06daa749231"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-BlackCond.otf",
+      "sha1": "a5e6681608f08d70e16cfff06ddc0cf653192859"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-BlackCondObl.otf",
+      "sha1": "2cec8e728ec9092cb10804aa5a481ab33397ddd2"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-BlackExt.otf",
+      "sha1": "bc02c8c2ee465ea72de713cdb8e5537bfc8e789b"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-BlackExtObl.otf",
+      "sha1": "c495d5842ebcc987852e1a90a95f1cc395f57c18"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-BoldCondObl.otf",
+      "sha1": "dcacf0514dc70803573addeb9c3da7a7ece62180"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-BoldExt.otf",
+      "sha1": "531a72032b1e44c10b3707bd1578a4e2fc6c7333"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-BoldExtObl.otf",
+      "sha1": "7e84c71bd859e3bb24b4a912c91d318a4f56e38d"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-Condensed.otf",
+      "sha1": "395645ef9849cdedac4106213dd622c546a200bd"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-CondensedObl.otf",
+      "sha1": "ed5f67afdaaee4b91722ce9ee3b3dec9e6dcfaf0"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-ExtBlackCond.otf",
+      "sha1": "0928696e046aaed94f868126b352b4ec069ac265"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-ExtBlackCondObl.otf",
+      "sha1": "0030f568625431c7762ee4082ca803125428cbdc"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-Extended.otf",
+      "sha1": "88499ce29d4ab529c19af2ad92bf23fbcd43ba14"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-ExtendedObl.otf",
+      "sha1": "9bb54b5d6b8b92eb9c89d47efc8af4ce8e61a11f"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-Heavy.otf",
+      "sha1": "4e80879dea19630b804a2e03593317a3d4f43097"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-HeavyCond.otf",
+      "sha1": "c172683f6bdadba0adb796b0a7b6cba8e622c28f"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-HeavyCondObl.otf",
+      "sha1": "f922609e59b569612f73ceb4154bf6b0fbbe4402"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-HeavyExt.otf",
+      "sha1": "b49e8c83fd49f86634a34123d61d90362227dfe7"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-HeavyExtObl.otf",
+      "sha1": "ec04e9af8265ec3233d20458dc418115c2c4d1ba"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-HeavyItalic.otf",
+      "sha1": "111074f24a82e1a02aa29bc8cf6a0132b9350312"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-Light.otf",
+      "sha1": "d3dc32c928e00a5fd9c3544691f179b8825ba3c1"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-LightCondObl.otf",
+      "sha1": "ac292fe57255d1e3a81c2505bbed38e8031d31ef"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-LightExt.otf",
+      "sha1": "2e5aba37988081d12e957f02d4017c37e5ccac09"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-LightExtObl.otf",
+      "sha1": "ab751087836ddd9ea99c52da1bcef0a801ade5c6"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-Medium.otf",
+      "sha1": "9fcc81b562894d3cbf6b72a0d8d0412885e89df5"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-MediumCond.otf",
+      "sha1": "9b9a6ae6dff4c3c0abe2db4d2abf242f4765cbd8"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-MediumCondObl.otf",
+      "sha1": "caf403b9707225f6a47f04c5d7f1bfa4f2b4f2ae"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-MediumExt.otf",
+      "sha1": "43dba1ef7abecd610e1dc55ec57bd1b650a2169f"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-MediumExtObl.otf",
+      "sha1": "7fc43e928a58a24019d71d08d6fd90339487ad84"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-Roman.otf",
+      "sha1": "1cfb94cd7d3818187fb9670eea88d3b20d629acb"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-Thin.otf",
+      "sha1": "fb295a127ca4c763034ab6ef4dc2330fc17ecc87"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-ThinCond.otf",
+      "sha1": "f359bbcd7d4f94f0d32e1f1ffd9f6a03a245eee7"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-ThinCondObl.otf",
+      "sha1": "71cedac46415923a1005678e35aff3a1bb598b04"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-ThinExtObl.otf",
+      "sha1": "f8e575bfb40069a1a9e71b11b5447e12d9932be0"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-ThinItalic.otf",
+      "sha1": "f8d88c3f321ae08e32964139c9aac142f1d76195"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-UltraLigCond.otf",
+      "sha1": "39adf5f5d215ab6c1f8042675c9b5a73a835126e"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-UltraLigCondObl.otf",
+      "sha1": "cd3cbbe29a8b790d8dae3335933b1e9962387678"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-UltraLigExt.otf",
+      "sha1": "d29691e187351d7e188b03bf25b2da3e1298e9cd"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeueBold.ttf",
+      "sha1": "edcad669837fcf509767d2feb98afab4cd894eb5"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeueBoldItalic.ttf",
+      "sha1": "e5c53677e17ed7f373a729bb71f5b93c3fe586f3"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeueCondensedBlack.ttf",
+      "sha1": "d90033cbcf443028fa73d03cadc0469ee764027c"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeueCondensedBold.ttf",
+      "sha1": "55dd65aeaa9e97106631298a9c0758b40721e691"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeueItalic.ttf",
+      "sha1": "fb2ab5385f1253eaed1116daa3bded5a6cf5f691"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeueLight.ttf",
+      "sha1": "04fb8f152deba761ba9fab9975f9c556e4afe300"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeueLightItalic.ttf",
+      "sha1": "d93dd0606f29c16d4133c998cfb1a29ca8fa297c"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeueMedium.ttf",
+      "sha1": "b609bada34446ae3c38a677ac26bd36e7a0cb65b"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeueUltraLight.ttf",
+      "sha1": "f9f021ab97b61f6f528ca586faeff957914e7ac6"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeueUltraLightItal.ttf",
+      "sha1": "38bc44bb838a7bdee7d69283446d24b928333945"
+    }
+  ]
+}

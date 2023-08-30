@@ -1,0 +1,907 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00E356F31AD99517003FC87E /* TaskManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* TaskManagerTests.m */; };
+		0C80B921A6F3F58F76C31292 /* libPods-TaskManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-TaskManager.a */; };
+		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
+		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		7699B88040F8A987B510C191 /* libPods-TaskManager-TaskManagerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-TaskManager-TaskManagerTests.a */; };
+		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		973E4CB4C1EE4B4997076CCD /* HelveticaNeue-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 61AB25CE6C54461488942E37 /* HelveticaNeue-Black.otf */; };
+		30B1975C23954597B67077FB /* HelveticaNeue-BlackCond.otf in Resources */ = {isa = PBXBuildFile; fileRef = 167EFB7A858349149AE56BF4 /* HelveticaNeue-BlackCond.otf */; };
+		3613748E45C345549DB3C022 /* HelveticaNeue-BlackCondObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8FC804D81ED743A9A7919170 /* HelveticaNeue-BlackCondObl.otf */; };
+		F231B6A670B144EAA119ADCD /* HelveticaNeue-BlackExt.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBF830B65D744B318222332F /* HelveticaNeue-BlackExt.otf */; };
+		BF1DAA49E6F84EB58E8F410A /* HelveticaNeue-BlackExtObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7B326E3ABD0345EC9282E88D /* HelveticaNeue-BlackExtObl.otf */; };
+		A79FAE7E36E7444B8F9AAE2F /* HelveticaNeue-BoldCondObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB43E80C15E44DE0911AB7E5 /* HelveticaNeue-BoldCondObl.otf */; };
+		48ED73BDB349484395D060FD /* HelveticaNeue-BoldExt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3AAD11BCDAAB45F3B1E352A2 /* HelveticaNeue-BoldExt.otf */; };
+		A0916EE1602C4028AB6CD28D /* HelveticaNeue-BoldExtObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE3C06E2CBF34F03A6F40AE6 /* HelveticaNeue-BoldExtObl.otf */; };
+		3F446F86F51B41BA9F733662 /* HelveticaNeue-Condensed.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3F72846AEF04118A0695303 /* HelveticaNeue-Condensed.otf */; };
+		767D284866584FCD90098756 /* HelveticaNeue-CondensedObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = 29B7C1543DEA4D74A7C85030 /* HelveticaNeue-CondensedObl.otf */; };
+		9D3FC8A791894493B2F7EA72 /* HelveticaNeue-ExtBlackCond.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6C3A8E61442B42E3893AAE8B /* HelveticaNeue-ExtBlackCond.otf */; };
+		E956018C543C4A65B0CBE34C /* HelveticaNeue-ExtBlackCondObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1B692D72805E44618CBBD345 /* HelveticaNeue-ExtBlackCondObl.otf */; };
+		D7B98F81E94D49AFB8158845 /* HelveticaNeue-Extended.otf in Resources */ = {isa = PBXBuildFile; fileRef = 33D4A8F327F94ADABF101ABC /* HelveticaNeue-Extended.otf */; };
+		6E9B89B5C5B949A488BBB3A3 /* HelveticaNeue-ExtendedObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = B58363132EC0461BB9A9F456 /* HelveticaNeue-ExtendedObl.otf */; };
+		599D7A75382F4B4BB9913872 /* HelveticaNeue-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 21AB126B6035472EBBF8E945 /* HelveticaNeue-Heavy.otf */; };
+		A8CA497D52A34FA1BE8F8185 /* HelveticaNeue-HeavyCond.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2AD39933E5BC4B168DD3B464 /* HelveticaNeue-HeavyCond.otf */; };
+		9F77DF90A37C415EB14CC672 /* HelveticaNeue-HeavyCondObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA1DBA6AF6E94F778BDB577A /* HelveticaNeue-HeavyCondObl.otf */; };
+		B2011FA4664E4C77B3671C90 /* HelveticaNeue-HeavyExt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 44BAF7FA763E4E53A964F811 /* HelveticaNeue-HeavyExt.otf */; };
+		B385839A422C4D068C6AEDE3 /* HelveticaNeue-HeavyExtObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = 81335EFC87924F4A83237E03 /* HelveticaNeue-HeavyExtObl.otf */; };
+		DB8442614FF445DBABAA1654 /* HelveticaNeue-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D7D6503C18524A5C8F218880 /* HelveticaNeue-HeavyItalic.otf */; };
+		E9BEA263E4C44234851CBD16 /* HelveticaNeue-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3C92F02EF3E74A1F85A64DD3 /* HelveticaNeue-Light.otf */; };
+		C51CAB3E38F2460F99647B66 /* HelveticaNeue-LightCondObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8CBCE008D3614ACEB0D29924 /* HelveticaNeue-LightCondObl.otf */; };
+		22A0CB56C1644DCD90830C7A /* HelveticaNeue-LightExt.otf in Resources */ = {isa = PBXBuildFile; fileRef = D324BC49400A45BB9EB5D72B /* HelveticaNeue-LightExt.otf */; };
+		B5E9E1471CAA41FF96002F91 /* HelveticaNeue-LightExtObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = A7BFAFF176744C2BAFE8B537 /* HelveticaNeue-LightExtObl.otf */; };
+		14592F853CE54C93A8E4F8D5 /* HelveticaNeue-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FE053C0BC18A464AA0598AF2 /* HelveticaNeue-Medium.otf */; };
+		E1390E04B04D4BE58FF0C664 /* HelveticaNeue-MediumCond.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED20DEF8B7F843CD9DB7F24B /* HelveticaNeue-MediumCond.otf */; };
+		CB42C93B82284AA3A0FA5801 /* HelveticaNeue-MediumCondObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D77169A2DA940BBAAFDB3E5 /* HelveticaNeue-MediumCondObl.otf */; };
+		C00B06BBAB444223BC6375F7 /* HelveticaNeue-MediumExt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DADB401A7E042C3B6F36629 /* HelveticaNeue-MediumExt.otf */; };
+		2AB7ABB3CFB141D7B8A1A09A /* HelveticaNeue-MediumExtObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C65E69446DB42D9AA05E229 /* HelveticaNeue-MediumExtObl.otf */; };
+		8319A0B48620454CB7C2D0D8 /* HelveticaNeue-Roman.otf in Resources */ = {isa = PBXBuildFile; fileRef = E8CA7365228A4C78A9F0D2DA /* HelveticaNeue-Roman.otf */; };
+		8836C9D4A05D488FB899FB6A /* HelveticaNeue-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = D289813E3190407788437FAB /* HelveticaNeue-Thin.otf */; };
+		42FA1E5A623C491E97FC0AED /* HelveticaNeue-ThinCond.otf in Resources */ = {isa = PBXBuildFile; fileRef = 37A3E9118CC6402BB776F9B3 /* HelveticaNeue-ThinCond.otf */; };
+		0F905006C6DE479F9967DABA /* HelveticaNeue-ThinCondObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = D5B239C41BC14BFC84A1F0DF /* HelveticaNeue-ThinCondObl.otf */; };
+		FC584393378442098026AB69 /* HelveticaNeue-ThinExtObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = DADC7E0B91DF47F7894F404F /* HelveticaNeue-ThinExtObl.otf */; };
+		0A123E200F854834A9F02763 /* HelveticaNeue-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C831688FD43645A1844FAEB7 /* HelveticaNeue-ThinItalic.otf */; };
+		FD46804820B946A6964DE516 /* HelveticaNeue-UltraLigCond.otf in Resources */ = {isa = PBXBuildFile; fileRef = C833D369F910475696E1BCBD /* HelveticaNeue-UltraLigCond.otf */; };
+		ACAB2268EB284B63BDA95184 /* HelveticaNeue-UltraLigCondObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4B4A91490CDB4FA5BDED201D /* HelveticaNeue-UltraLigCondObl.otf */; };
+		0EEDB68533E744808E92963F /* HelveticaNeue-UltraLigExt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18B816D68C6F4CD8AA0B4515 /* HelveticaNeue-UltraLigExt.otf */; };
+		48F23EA59A3E4548947AE545 /* HelveticaBlkIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8072924690344D0B65FB1AA /* HelveticaBlkIt.ttf */; };
+		737D7EF02B464B08AC24B000 /* HelveticaNeueBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCADC017E98F4A49A6229C09 /* HelveticaNeueBold.ttf */; };
+		C837BB84761D46B98F927FA2 /* HelveticaNeueBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 946FDC00C4614796AB3A6450 /* HelveticaNeueBoldItalic.ttf */; };
+		A5546B79272741F984FDD138 /* HelveticaNeueCondensedBlack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78512A39149245E2AC4B1D04 /* HelveticaNeueCondensedBlack.ttf */; };
+		A15D9CF3062D4B4780930A35 /* HelveticaNeueCondensedBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AC7C05980AA4542BC84DA51 /* HelveticaNeueCondensedBold.ttf */; };
+		A5A3E3E9F76848299734FD23 /* HelveticaNeueItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2CB92E9CF2B47288CDC0A1F /* HelveticaNeueItalic.ttf */; };
+		2755291B75EF4F2298ED591B /* HelveticaNeueLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E01AC8DFF82A4A41B971299F /* HelveticaNeueLight.ttf */; };
+		51CC2E8B20904DA8877A1DA8 /* HelveticaNeueLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1919D76522EB4FC4A04AFB96 /* HelveticaNeueLightItalic.ttf */; };
+		A8168F4F44C94DBD82C83C22 /* HelveticaNeueMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 208A3A30A0B74D3A8DD97470 /* HelveticaNeueMedium.ttf */; };
+		36ADED806DC341F1BD19B99B /* HelveticaNeueUltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 879418F1B7554C89B4EED4B3 /* HelveticaNeueUltraLight.ttf */; };
+		A5302306082245E8B4ED7E97 /* HelveticaNeueUltraLightItal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F1D1E3E0FAD4EC5AE5490CA /* HelveticaNeueUltraLightItal.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
+			remoteInfo = TaskManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00E356EE1AD99517003FC87E /* TaskManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* TaskManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskManagerTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* TaskManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = TaskManager/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = TaskManager/AppDelegate.mm; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = TaskManager/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = TaskManager/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = TaskManager/main.m; sourceTree = "<group>"; };
+		19F6CBCC0A4E27FBF8BF4A61 /* libPods-TaskManager-TaskManagerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TaskManager-TaskManagerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B4392A12AC88292D35C810B /* Pods-TaskManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskManager.debug.xcconfig"; path = "Target Support Files/Pods-TaskManager/Pods-TaskManager.debug.xcconfig"; sourceTree = "<group>"; };
+		5709B34CF0A7D63546082F79 /* Pods-TaskManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskManager.release.xcconfig"; path = "Target Support Files/Pods-TaskManager/Pods-TaskManager.release.xcconfig"; sourceTree = "<group>"; };
+		5B7EB9410499542E8C5724F5 /* Pods-TaskManager-TaskManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskManager-TaskManagerTests.debug.xcconfig"; path = "Target Support Files/Pods-TaskManager-TaskManagerTests/Pods-TaskManager-TaskManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5DCACB8F33CDC322A6C60F78 /* libPods-TaskManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TaskManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = TaskManager/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		89C6BE57DB24E9ADA2F236DE /* Pods-TaskManager-TaskManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskManager-TaskManagerTests.release.xcconfig"; path = "Target Support Files/Pods-TaskManager-TaskManagerTests/Pods-TaskManager-TaskManagerTests.release.xcconfig"; sourceTree = "<group>"; };
+		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		61AB25CE6C54461488942E37 /* HelveticaNeue-Black.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-Black.otf"; path = "../src/assets/fonts/HelveticaNeue-Black.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		167EFB7A858349149AE56BF4 /* HelveticaNeue-BlackCond.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-BlackCond.otf"; path = "../src/assets/fonts/HelveticaNeue-BlackCond.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8FC804D81ED743A9A7919170 /* HelveticaNeue-BlackCondObl.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-BlackCondObl.otf"; path = "../src/assets/fonts/HelveticaNeue-BlackCondObl.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BBF830B65D744B318222332F /* HelveticaNeue-BlackExt.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-BlackExt.otf"; path = "../src/assets/fonts/HelveticaNeue-BlackExt.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7B326E3ABD0345EC9282E88D /* HelveticaNeue-BlackExtObl.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-BlackExtObl.otf"; path = "../src/assets/fonts/HelveticaNeue-BlackExtObl.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CB43E80C15E44DE0911AB7E5 /* HelveticaNeue-BoldCondObl.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-BoldCondObl.otf"; path = "../src/assets/fonts/HelveticaNeue-BoldCondObl.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3AAD11BCDAAB45F3B1E352A2 /* HelveticaNeue-BoldExt.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-BoldExt.otf"; path = "../src/assets/fonts/HelveticaNeue-BoldExt.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DE3C06E2CBF34F03A6F40AE6 /* HelveticaNeue-BoldExtObl.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-BoldExtObl.otf"; path = "../src/assets/fonts/HelveticaNeue-BoldExtObl.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B3F72846AEF04118A0695303 /* HelveticaNeue-Condensed.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-Condensed.otf"; path = "../src/assets/fonts/HelveticaNeue-Condensed.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		29B7C1543DEA4D74A7C85030 /* HelveticaNeue-CondensedObl.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-CondensedObl.otf"; path = "../src/assets/fonts/HelveticaNeue-CondensedObl.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6C3A8E61442B42E3893AAE8B /* HelveticaNeue-ExtBlackCond.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-ExtBlackCond.otf"; path = "../src/assets/fonts/HelveticaNeue-ExtBlackCond.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1B692D72805E44618CBBD345 /* HelveticaNeue-ExtBlackCondObl.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-ExtBlackCondObl.otf"; path = "../src/assets/fonts/HelveticaNeue-ExtBlackCondObl.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		33D4A8F327F94ADABF101ABC /* HelveticaNeue-Extended.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-Extended.otf"; path = "../src/assets/fonts/HelveticaNeue-Extended.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B58363132EC0461BB9A9F456 /* HelveticaNeue-ExtendedObl.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-ExtendedObl.otf"; path = "../src/assets/fonts/HelveticaNeue-ExtendedObl.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		21AB126B6035472EBBF8E945 /* HelveticaNeue-Heavy.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-Heavy.otf"; path = "../src/assets/fonts/HelveticaNeue-Heavy.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2AD39933E5BC4B168DD3B464 /* HelveticaNeue-HeavyCond.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-HeavyCond.otf"; path = "../src/assets/fonts/HelveticaNeue-HeavyCond.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CA1DBA6AF6E94F778BDB577A /* HelveticaNeue-HeavyCondObl.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-HeavyCondObl.otf"; path = "../src/assets/fonts/HelveticaNeue-HeavyCondObl.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		44BAF7FA763E4E53A964F811 /* HelveticaNeue-HeavyExt.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-HeavyExt.otf"; path = "../src/assets/fonts/HelveticaNeue-HeavyExt.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		81335EFC87924F4A83237E03 /* HelveticaNeue-HeavyExtObl.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-HeavyExtObl.otf"; path = "../src/assets/fonts/HelveticaNeue-HeavyExtObl.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D7D6503C18524A5C8F218880 /* HelveticaNeue-HeavyItalic.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-HeavyItalic.otf"; path = "../src/assets/fonts/HelveticaNeue-HeavyItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3C92F02EF3E74A1F85A64DD3 /* HelveticaNeue-Light.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-Light.otf"; path = "../src/assets/fonts/HelveticaNeue-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8CBCE008D3614ACEB0D29924 /* HelveticaNeue-LightCondObl.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-LightCondObl.otf"; path = "../src/assets/fonts/HelveticaNeue-LightCondObl.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D324BC49400A45BB9EB5D72B /* HelveticaNeue-LightExt.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-LightExt.otf"; path = "../src/assets/fonts/HelveticaNeue-LightExt.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A7BFAFF176744C2BAFE8B537 /* HelveticaNeue-LightExtObl.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-LightExtObl.otf"; path = "../src/assets/fonts/HelveticaNeue-LightExtObl.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FE053C0BC18A464AA0598AF2 /* HelveticaNeue-Medium.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-Medium.otf"; path = "../src/assets/fonts/HelveticaNeue-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		ED20DEF8B7F843CD9DB7F24B /* HelveticaNeue-MediumCond.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-MediumCond.otf"; path = "../src/assets/fonts/HelveticaNeue-MediumCond.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4D77169A2DA940BBAAFDB3E5 /* HelveticaNeue-MediumCondObl.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-MediumCondObl.otf"; path = "../src/assets/fonts/HelveticaNeue-MediumCondObl.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6DADB401A7E042C3B6F36629 /* HelveticaNeue-MediumExt.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-MediumExt.otf"; path = "../src/assets/fonts/HelveticaNeue-MediumExt.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9C65E69446DB42D9AA05E229 /* HelveticaNeue-MediumExtObl.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-MediumExtObl.otf"; path = "../src/assets/fonts/HelveticaNeue-MediumExtObl.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E8CA7365228A4C78A9F0D2DA /* HelveticaNeue-Roman.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-Roman.otf"; path = "../src/assets/fonts/HelveticaNeue-Roman.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D289813E3190407788437FAB /* HelveticaNeue-Thin.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-Thin.otf"; path = "../src/assets/fonts/HelveticaNeue-Thin.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		37A3E9118CC6402BB776F9B3 /* HelveticaNeue-ThinCond.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-ThinCond.otf"; path = "../src/assets/fonts/HelveticaNeue-ThinCond.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D5B239C41BC14BFC84A1F0DF /* HelveticaNeue-ThinCondObl.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-ThinCondObl.otf"; path = "../src/assets/fonts/HelveticaNeue-ThinCondObl.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DADC7E0B91DF47F7894F404F /* HelveticaNeue-ThinExtObl.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-ThinExtObl.otf"; path = "../src/assets/fonts/HelveticaNeue-ThinExtObl.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C831688FD43645A1844FAEB7 /* HelveticaNeue-ThinItalic.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-ThinItalic.otf"; path = "../src/assets/fonts/HelveticaNeue-ThinItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C833D369F910475696E1BCBD /* HelveticaNeue-UltraLigCond.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-UltraLigCond.otf"; path = "../src/assets/fonts/HelveticaNeue-UltraLigCond.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4B4A91490CDB4FA5BDED201D /* HelveticaNeue-UltraLigCondObl.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-UltraLigCondObl.otf"; path = "../src/assets/fonts/HelveticaNeue-UltraLigCondObl.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		18B816D68C6F4CD8AA0B4515 /* HelveticaNeue-UltraLigExt.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-UltraLigExt.otf"; path = "../src/assets/fonts/HelveticaNeue-UltraLigExt.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E8072924690344D0B65FB1AA /* HelveticaBlkIt.ttf */ = {isa = PBXFileReference; name = "HelveticaBlkIt.ttf"; path = "../src/assets/fonts/HelveticaBlkIt.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CCADC017E98F4A49A6229C09 /* HelveticaNeueBold.ttf */ = {isa = PBXFileReference; name = "HelveticaNeueBold.ttf"; path = "../src/assets/fonts/HelveticaNeueBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		946FDC00C4614796AB3A6450 /* HelveticaNeueBoldItalic.ttf */ = {isa = PBXFileReference; name = "HelveticaNeueBoldItalic.ttf"; path = "../src/assets/fonts/HelveticaNeueBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		78512A39149245E2AC4B1D04 /* HelveticaNeueCondensedBlack.ttf */ = {isa = PBXFileReference; name = "HelveticaNeueCondensedBlack.ttf"; path = "../src/assets/fonts/HelveticaNeueCondensedBlack.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6AC7C05980AA4542BC84DA51 /* HelveticaNeueCondensedBold.ttf */ = {isa = PBXFileReference; name = "HelveticaNeueCondensedBold.ttf"; path = "../src/assets/fonts/HelveticaNeueCondensedBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D2CB92E9CF2B47288CDC0A1F /* HelveticaNeueItalic.ttf */ = {isa = PBXFileReference; name = "HelveticaNeueItalic.ttf"; path = "../src/assets/fonts/HelveticaNeueItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E01AC8DFF82A4A41B971299F /* HelveticaNeueLight.ttf */ = {isa = PBXFileReference; name = "HelveticaNeueLight.ttf"; path = "../src/assets/fonts/HelveticaNeueLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1919D76522EB4FC4A04AFB96 /* HelveticaNeueLightItalic.ttf */ = {isa = PBXFileReference; name = "HelveticaNeueLightItalic.ttf"; path = "../src/assets/fonts/HelveticaNeueLightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		208A3A30A0B74D3A8DD97470 /* HelveticaNeueMedium.ttf */ = {isa = PBXFileReference; name = "HelveticaNeueMedium.ttf"; path = "../src/assets/fonts/HelveticaNeueMedium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		879418F1B7554C89B4EED4B3 /* HelveticaNeueUltraLight.ttf */ = {isa = PBXFileReference; name = "HelveticaNeueUltraLight.ttf"; path = "../src/assets/fonts/HelveticaNeueUltraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6F1D1E3E0FAD4EC5AE5490CA /* HelveticaNeueUltraLightItal.ttf */ = {isa = PBXFileReference; name = "HelveticaNeueUltraLightItal.ttf"; path = "../src/assets/fonts/HelveticaNeueUltraLightItal.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00E356EB1AD99517003FC87E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7699B88040F8A987B510C191 /* libPods-TaskManager-TaskManagerTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C80B921A6F3F58F76C31292 /* libPods-TaskManager.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E356EF1AD99517003FC87E /* TaskManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F21AD99517003FC87E /* TaskManagerTests.m */,
+				00E356F01AD99517003FC87E /* Supporting Files */,
+			);
+			path = TaskManagerTests;
+			sourceTree = "<group>";
+		};
+		00E356F01AD99517003FC87E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F11AD99517003FC87E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		13B07FAE1A68108700A75B9A /* TaskManager */ = {
+			isa = PBXGroup;
+			children = (
+				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
+				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
+				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				13B07FB61A68108700A75B9A /* Info.plist */,
+				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
+				13B07FB71A68108700A75B9A /* main.m */,
+			);
+			name = TaskManager;
+			sourceTree = "<group>";
+		};
+		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
+				5DCACB8F33CDC322A6C60F78 /* libPods-TaskManager.a */,
+				19F6CBCC0A4E27FBF8BF4A61 /* libPods-TaskManager-TaskManagerTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		83CBB9F61A601CBA00E9B192 = {
+			isa = PBXGroup;
+			children = (
+				13B07FAE1A68108700A75B9A /* TaskManager */,
+				832341AE1AAA6A7D00B99B32 /* Libraries */,
+				00E356EF1AD99517003FC87E /* TaskManagerTests */,
+				83CBBA001A601CBA00E9B192 /* Products */,
+				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				52B5DCF7CDE2451182B9E688 /* Resources */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
+		};
+		83CBBA001A601CBA00E9B192 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13B07F961A680F5B00A75B9A /* TaskManager.app */,
+				00E356EE1AD99517003FC87E /* TaskManagerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B4392A12AC88292D35C810B /* Pods-TaskManager.debug.xcconfig */,
+				5709B34CF0A7D63546082F79 /* Pods-TaskManager.release.xcconfig */,
+				5B7EB9410499542E8C5724F5 /* Pods-TaskManager-TaskManagerTests.debug.xcconfig */,
+				89C6BE57DB24E9ADA2F236DE /* Pods-TaskManager-TaskManagerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		52B5DCF7CDE2451182B9E688 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				61AB25CE6C54461488942E37 /* HelveticaNeue-Black.otf */,
+				167EFB7A858349149AE56BF4 /* HelveticaNeue-BlackCond.otf */,
+				8FC804D81ED743A9A7919170 /* HelveticaNeue-BlackCondObl.otf */,
+				BBF830B65D744B318222332F /* HelveticaNeue-BlackExt.otf */,
+				7B326E3ABD0345EC9282E88D /* HelveticaNeue-BlackExtObl.otf */,
+				CB43E80C15E44DE0911AB7E5 /* HelveticaNeue-BoldCondObl.otf */,
+				3AAD11BCDAAB45F3B1E352A2 /* HelveticaNeue-BoldExt.otf */,
+				DE3C06E2CBF34F03A6F40AE6 /* HelveticaNeue-BoldExtObl.otf */,
+				B3F72846AEF04118A0695303 /* HelveticaNeue-Condensed.otf */,
+				29B7C1543DEA4D74A7C85030 /* HelveticaNeue-CondensedObl.otf */,
+				6C3A8E61442B42E3893AAE8B /* HelveticaNeue-ExtBlackCond.otf */,
+				1B692D72805E44618CBBD345 /* HelveticaNeue-ExtBlackCondObl.otf */,
+				33D4A8F327F94ADABF101ABC /* HelveticaNeue-Extended.otf */,
+				B58363132EC0461BB9A9F456 /* HelveticaNeue-ExtendedObl.otf */,
+				21AB126B6035472EBBF8E945 /* HelveticaNeue-Heavy.otf */,
+				2AD39933E5BC4B168DD3B464 /* HelveticaNeue-HeavyCond.otf */,
+				CA1DBA6AF6E94F778BDB577A /* HelveticaNeue-HeavyCondObl.otf */,
+				44BAF7FA763E4E53A964F811 /* HelveticaNeue-HeavyExt.otf */,
+				81335EFC87924F4A83237E03 /* HelveticaNeue-HeavyExtObl.otf */,
+				D7D6503C18524A5C8F218880 /* HelveticaNeue-HeavyItalic.otf */,
+				3C92F02EF3E74A1F85A64DD3 /* HelveticaNeue-Light.otf */,
+				8CBCE008D3614ACEB0D29924 /* HelveticaNeue-LightCondObl.otf */,
+				D324BC49400A45BB9EB5D72B /* HelveticaNeue-LightExt.otf */,
+				A7BFAFF176744C2BAFE8B537 /* HelveticaNeue-LightExtObl.otf */,
+				FE053C0BC18A464AA0598AF2 /* HelveticaNeue-Medium.otf */,
+				ED20DEF8B7F843CD9DB7F24B /* HelveticaNeue-MediumCond.otf */,
+				4D77169A2DA940BBAAFDB3E5 /* HelveticaNeue-MediumCondObl.otf */,
+				6DADB401A7E042C3B6F36629 /* HelveticaNeue-MediumExt.otf */,
+				9C65E69446DB42D9AA05E229 /* HelveticaNeue-MediumExtObl.otf */,
+				E8CA7365228A4C78A9F0D2DA /* HelveticaNeue-Roman.otf */,
+				D289813E3190407788437FAB /* HelveticaNeue-Thin.otf */,
+				37A3E9118CC6402BB776F9B3 /* HelveticaNeue-ThinCond.otf */,
+				D5B239C41BC14BFC84A1F0DF /* HelveticaNeue-ThinCondObl.otf */,
+				DADC7E0B91DF47F7894F404F /* HelveticaNeue-ThinExtObl.otf */,
+				C831688FD43645A1844FAEB7 /* HelveticaNeue-ThinItalic.otf */,
+				C833D369F910475696E1BCBD /* HelveticaNeue-UltraLigCond.otf */,
+				4B4A91490CDB4FA5BDED201D /* HelveticaNeue-UltraLigCondObl.otf */,
+				18B816D68C6F4CD8AA0B4515 /* HelveticaNeue-UltraLigExt.otf */,
+				E8072924690344D0B65FB1AA /* HelveticaBlkIt.ttf */,
+				CCADC017E98F4A49A6229C09 /* HelveticaNeueBold.ttf */,
+				946FDC00C4614796AB3A6450 /* HelveticaNeueBoldItalic.ttf */,
+				78512A39149245E2AC4B1D04 /* HelveticaNeueCondensedBlack.ttf */,
+				6AC7C05980AA4542BC84DA51 /* HelveticaNeueCondensedBold.ttf */,
+				D2CB92E9CF2B47288CDC0A1F /* HelveticaNeueItalic.ttf */,
+				E01AC8DFF82A4A41B971299F /* HelveticaNeueLight.ttf */,
+				1919D76522EB4FC4A04AFB96 /* HelveticaNeueLightItalic.ttf */,
+				208A3A30A0B74D3A8DD97470 /* HelveticaNeueMedium.ttf */,
+				879418F1B7554C89B4EED4B3 /* HelveticaNeueUltraLight.ttf */,
+				6F1D1E3E0FAD4EC5AE5490CA /* HelveticaNeueUltraLightItal.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00E356ED1AD99517003FC87E /* TaskManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "TaskManagerTests" */;
+			buildPhases = (
+				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
+				00E356EA1AD99517003FC87E /* Sources */,
+				00E356EB1AD99517003FC87E /* Frameworks */,
+				00E356EC1AD99517003FC87E /* Resources */,
+				C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */,
+				F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00E356F51AD99517003FC87E /* PBXTargetDependency */,
+			);
+			name = TaskManagerTests;
+			productName = TaskManagerTests;
+			productReference = 00E356EE1AD99517003FC87E /* TaskManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		13B07F861A680F5B00A75B9A /* TaskManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "TaskManager" */;
+			buildPhases = (
+				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
+				FD10A7F022414F080027D42C /* Start Packager */,
+				13B07F871A680F5B00A75B9A /* Sources */,
+				13B07F8C1A680F5B00A75B9A /* Frameworks */,
+				13B07F8E1A680F5B00A75B9A /* Resources */,
+				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
+				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TaskManager;
+			productName = TaskManager;
+			productReference = 13B07F961A680F5B00A75B9A /* TaskManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83CBB9F71A601CBA00E9B192 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					00E356ED1AD99517003FC87E = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1120;
+					};
+				};
+			};
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "TaskManager" */;
+			compatibilityVersion = "Xcode 12.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83CBB9F61A601CBA00E9B192;
+			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13B07F861A680F5B00A75B9A /* TaskManager */,
+				00E356ED1AD99517003FC87E /* TaskManagerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00E356EC1AD99517003FC87E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8E1A680F5B00A75B9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				973E4CB4C1EE4B4997076CCD /* HelveticaNeue-Black.otf in Resources */,
+				30B1975C23954597B67077FB /* HelveticaNeue-BlackCond.otf in Resources */,
+				3613748E45C345549DB3C022 /* HelveticaNeue-BlackCondObl.otf in Resources */,
+				F231B6A670B144EAA119ADCD /* HelveticaNeue-BlackExt.otf in Resources */,
+				BF1DAA49E6F84EB58E8F410A /* HelveticaNeue-BlackExtObl.otf in Resources */,
+				A79FAE7E36E7444B8F9AAE2F /* HelveticaNeue-BoldCondObl.otf in Resources */,
+				48ED73BDB349484395D060FD /* HelveticaNeue-BoldExt.otf in Resources */,
+				A0916EE1602C4028AB6CD28D /* HelveticaNeue-BoldExtObl.otf in Resources */,
+				3F446F86F51B41BA9F733662 /* HelveticaNeue-Condensed.otf in Resources */,
+				767D284866584FCD90098756 /* HelveticaNeue-CondensedObl.otf in Resources */,
+				9D3FC8A791894493B2F7EA72 /* HelveticaNeue-ExtBlackCond.otf in Resources */,
+				E956018C543C4A65B0CBE34C /* HelveticaNeue-ExtBlackCondObl.otf in Resources */,
+				D7B98F81E94D49AFB8158845 /* HelveticaNeue-Extended.otf in Resources */,
+				6E9B89B5C5B949A488BBB3A3 /* HelveticaNeue-ExtendedObl.otf in Resources */,
+				599D7A75382F4B4BB9913872 /* HelveticaNeue-Heavy.otf in Resources */,
+				A8CA497D52A34FA1BE8F8185 /* HelveticaNeue-HeavyCond.otf in Resources */,
+				9F77DF90A37C415EB14CC672 /* HelveticaNeue-HeavyCondObl.otf in Resources */,
+				B2011FA4664E4C77B3671C90 /* HelveticaNeue-HeavyExt.otf in Resources */,
+				B385839A422C4D068C6AEDE3 /* HelveticaNeue-HeavyExtObl.otf in Resources */,
+				DB8442614FF445DBABAA1654 /* HelveticaNeue-HeavyItalic.otf in Resources */,
+				E9BEA263E4C44234851CBD16 /* HelveticaNeue-Light.otf in Resources */,
+				C51CAB3E38F2460F99647B66 /* HelveticaNeue-LightCondObl.otf in Resources */,
+				22A0CB56C1644DCD90830C7A /* HelveticaNeue-LightExt.otf in Resources */,
+				B5E9E1471CAA41FF96002F91 /* HelveticaNeue-LightExtObl.otf in Resources */,
+				14592F853CE54C93A8E4F8D5 /* HelveticaNeue-Medium.otf in Resources */,
+				E1390E04B04D4BE58FF0C664 /* HelveticaNeue-MediumCond.otf in Resources */,
+				CB42C93B82284AA3A0FA5801 /* HelveticaNeue-MediumCondObl.otf in Resources */,
+				C00B06BBAB444223BC6375F7 /* HelveticaNeue-MediumExt.otf in Resources */,
+				2AB7ABB3CFB141D7B8A1A09A /* HelveticaNeue-MediumExtObl.otf in Resources */,
+				8319A0B48620454CB7C2D0D8 /* HelveticaNeue-Roman.otf in Resources */,
+				8836C9D4A05D488FB899FB6A /* HelveticaNeue-Thin.otf in Resources */,
+				42FA1E5A623C491E97FC0AED /* HelveticaNeue-ThinCond.otf in Resources */,
+				0F905006C6DE479F9967DABA /* HelveticaNeue-ThinCondObl.otf in Resources */,
+				FC584393378442098026AB69 /* HelveticaNeue-ThinExtObl.otf in Resources */,
+				0A123E200F854834A9F02763 /* HelveticaNeue-ThinItalic.otf in Resources */,
+				FD46804820B946A6964DE516 /* HelveticaNeue-UltraLigCond.otf in Resources */,
+				ACAB2268EB284B63BDA95184 /* HelveticaNeue-UltraLigCondObl.otf in Resources */,
+				0EEDB68533E744808E92963F /* HelveticaNeue-UltraLigExt.otf in Resources */,
+				48F23EA59A3E4548947AE545 /* HelveticaBlkIt.ttf in Resources */,
+				737D7EF02B464B08AC24B000 /* HelveticaNeueBold.ttf in Resources */,
+				C837BB84761D46B98F927FA2 /* HelveticaNeueBoldItalic.ttf in Resources */,
+				A5546B79272741F984FDD138 /* HelveticaNeueCondensedBlack.ttf in Resources */,
+				A15D9CF3062D4B4780930A35 /* HelveticaNeueCondensedBold.ttf in Resources */,
+				A5A3E3E9F76848299734FD23 /* HelveticaNeueItalic.ttf in Resources */,
+				2755291B75EF4F2298ED591B /* HelveticaNeueLight.ttf in Resources */,
+				51CC2E8B20904DA8877A1DA8 /* HelveticaNeueLightItalic.ttf in Resources */,
+				A8168F4F44C94DBD82C83C22 /* HelveticaNeueMedium.ttf in Resources */,
+				36ADED806DC341F1BD19B99B /* HelveticaNeueUltraLight.ttf in Resources */,
+				A5302306082245E8B4ED7E97 /* HelveticaNeueUltraLightItal.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.xcode.env.local",
+				"$(SRCROOT)/.xcode.env",
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
+		};
+		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TaskManager/Pods-TaskManager-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TaskManager/Pods-TaskManager-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TaskManager/Pods-TaskManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TaskManager-TaskManagerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TaskManager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TaskManager-TaskManagerTests/Pods-TaskManager-TaskManagerTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TaskManager-TaskManagerTests/Pods-TaskManager-TaskManagerTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TaskManager-TaskManagerTests/Pods-TaskManager-TaskManagerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TaskManager/Pods-TaskManager-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TaskManager/Pods-TaskManager-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TaskManager/Pods-TaskManager-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TaskManager-TaskManagerTests/Pods-TaskManager-TaskManagerTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TaskManager-TaskManagerTests/Pods-TaskManager-TaskManagerTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TaskManager-TaskManagerTests/Pods-TaskManager-TaskManagerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD10A7F022414F080027D42C /* Start Packager */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Start Packager";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00E356EA1AD99517003FC87E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00E356F31AD99517003FC87E /* TaskManagerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F871A680F5B00A75B9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				13B07FC11A68108700A75B9A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13B07F861A680F5B00A75B9A /* TaskManager */;
+			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00E356F61AD99517003FC87E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-TaskManager-TaskManagerTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TaskManagerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaskManager.app/TaskManager";
+			};
+			name = Debug;
+		};
+		00E356F71AD99517003FC87E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-TaskManager-TaskManagerTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = TaskManagerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaskManager.app/TaskManager";
+			};
+			name = Release;
+		};
+		13B07F941A680F5B00A75B9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-TaskManager.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = TaskManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = TaskManager;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		13B07F951A680F5B00A75B9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-TaskManager.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = TaskManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = TaskManager;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		83CBBA201A601CBA00E9B192 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SDKROOT)/usr/lib/swift\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DFOLLY_NO_CONFIG",
+					"-DFOLLY_MOBILE=1",
+					"-DFOLLY_USE_LIBCPP=1",
+				);
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		83CBBA211A601CBA00E9B192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SDKROOT)/usr/lib/swift\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DFOLLY_NO_CONFIG",
+					"-DFOLLY_MOBILE=1",
+					"-DFOLLY_USE_LIBCPP=1",
+				);
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "TaskManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00E356F61AD99517003FC87E /* Debug */,
+				00E356F71AD99517003FC87E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "TaskManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B07F941A680F5B00A75B9A /* Debug */,
+				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "TaskManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CBBA201A601CBA00E9B192 /* Debug */,
+				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
+}
