@@ -1,11 +1,7 @@
-import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import RNBootSplash from 'react-native-bootsplash';
-import SignIn from './src/screens/SignIn';
+import Navigator from './src/routes/Navigator';
+import Demo from './src/screens/Demo.test';
 
 export default function App() {
-  RNBootSplash.hide({fade: true});
-  return <SignIn />;
+  return <Navigator />;
 }
-
-const styles = StyleSheet.create({});
