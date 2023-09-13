@@ -14,8 +14,7 @@ export default function Navigator() {
           statusBarColor: 'transparent',
           statusBarTranslucent: true,
           headerShown: false,
-        }}
-        initialRouteName="SignIn">
+        }}>
         <Stack.Screen component={SplashScreen} name="SplashScreen" />
         <Stack.Screen component={SignIn} name="SignIn" />
         <Stack.Screen component={SignUp} name="SignUp" />

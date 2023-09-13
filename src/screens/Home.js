@@ -12,9 +12,10 @@ import {
   Pressable,
   TextInput,
   TouchableOpacity,
+  ActivityIndicator,
 } from 'react-native';
-import React, {useState} from 'react';
-import {Background, Gap} from '../components';
+import React, {useState, useEffect} from 'react';
+import {Background, Gap, UserData} from '../components';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import CheckBox from '@react-native-community/checkbox';
 
@@ -24,36 +25,67 @@ if (Platform.OS === 'android') {
   }
 }
 
-export default function Home() {
+export default function Home({route}) {
+  const token = route.params.token;
+  const host = 'https://todoapi-production-61ef.up.railway.app/api/v1';
   const [openDetail, setOpenDetail] = useState(null);
-  const dummyData = [
-    {
-      title: 'Tugas Datu',
-      desc: 'Deskripsi tugas satu',
-      checked: false,
-      id: 1,
-    },
-    {
-      title: 'Tugas Dua',
-      desc: 'Deskripsi tugas dua',
-      checked: true,
-      id: 2,
-    },
-    {
-      title: 'Tugas Tiga',
-      desc: 'Deskripsi tugas tiga yang sangat panjang sekali.',
-      checked: true,
-      id: 3,
-    },
-  ];
+
+  const [tasks, setTasks] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  function getTasks() {
+    setLoading(true);
+    fetch(`${host}/todos`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+    })
+      .then(response => response.json())
+      .then(json => {
+        setLoading(false);
+        if (json.status == 'success') {
+          setTasks(json.data.todos);
+        } else console.log(json);
+      })
+      .catch(error => {
+        setLoading(false);
+        console.log(error);
+      });
+  }
+  useEffect(() => {
+    getTasks();
+  }, []);
 
   const [modalAddVisible, setModalAddVisible] = useState(false);
   const closeModal = () => setModalAddVisible(false);
+  const [loadingAdd, setLoadingAdd] = useState(false);
   const [title, setTitle] = useState('');
   const [desc, setDesc] = useState('');
 
   function addTask() {
-    console.log({title, desc});
+    setLoadingAdd(true);
+    fetch(`${host}/todos`, {
+      method: 'POST',
+      body: JSON.stringify({title, desc}),
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+    })
+      .then(response => response.json())
+      .then(json => {
+        setLoadingAdd(false);
+        if (json.status == 'success') {
+          getTasks();
+          setModalAddVisible(false);
+        } else console.log(json);
+      })
+      .catch(error => {
+        setLoadingAdd(false);
+        console.log(error);
+      });
   }
 
   const [modalEditVisible, setModalEditVisible] = useState(false);
@@ -75,21 +107,20 @@ export default function Home() {
       <Background />
 
       {/* user profile */}
-      <View style={styles.viewProfile}>
-        <View>
-          <Text style={styles.textDefault}>Hi,</Text>
-          <Text style={styles.textUserName}>User Name</Text>
-        </View>
-        <Icon name="account-circle" color="white" size={50} />
-      </View>
+      <UserData token={token} />
 
       <View style={styles.viewLine} />
 
       {/* view data */}
       <FlatList
-        data={dummyData}
+        data={tasks}
         keyExtractor={(item, index) => index}
+        refreshing={loading}
+        onRefresh={getTasks}
         ListFooterComponent={<Gap height={20} />}
+        ListEmptyComponent={
+          <Text style={styles.textEmpty}>Tidak ada tugas</Text>
+        }
         renderItem={({item, index}) => {
           const handleOpenDetail = () => {
             LayoutAnimation.easeInEaseOut();
@@ -186,6 +217,7 @@ export default function Home() {
                   placeholder="Judul tugas..."
                   placeholderTextColor={'grey'}
                   style={styles.input}
+                  onChangeText={setTitle}
                 />
               </View>
 
@@ -199,15 +231,20 @@ export default function Home() {
                   placeholder="Deskripsi tugas.."
                   placeholderTextColor={'grey'}
                   style={styles.input}
+                  onChangeText={setDesc}
                 />
               </View>
 
               <Gap height={30} />
 
               {/* button submit */}
-              <TouchableNativeFeedback useForeground>
+              <TouchableNativeFeedback useForeground onPress={addTask}>
                 <View style={styles.btnSubmitAdd}>
-                  <Text style={styles.textBtnTitle}>Buat</Text>
+                  {loadingAdd ? (
+                    <ActivityIndicator color="white" />
+                  ) : (
+                    <Text style={styles.textBtnTitle}>Buat</Text>
+                  )}
                 </View>
               </TouchableNativeFeedback>
             </View>
@@ -277,6 +314,11 @@ export default function Home() {
 }
 
 const styles = StyleSheet.create({
+  textEmpty: {
+    color: 'white',
+    textAlign: 'center',
+    fontFamily: 'HelveticaNeue-Medium',
+  },
   input: {
     flex: 1,
     marginHorizontal: 5,
@@ -287,11 +329,11 @@ const styles = StyleSheet.create({
     height: 45,
     backgroundColor: '#00677E',
     overflow: 'hidden',
-    paddingHorizontal: 50,
     alignSelf: 'center',
     borderRadius: 45 / 2,
     elevation: 3,
     justifyContent: 'center',
+    width: 120,
   },
   viewModalInput: {
     padding: 30,

@@ -6,16 +6,20 @@ import {
   TouchableOpacity,
   TouchableNativeFeedback,
   ScrollView,
+  ToastAndroid,
+  ActivityIndicator,
 } from 'react-native';
 import React, {useState} from 'react';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {Background, Gap} from '../components';
 import CheckBox from '@react-native-community/checkbox';
+import EncryptedStorage from 'react-native-encrypted-storage';
 
 export default function SignUp({navigation}) {
   const [securePassword, setSecurePassword] = useState(true);
   const [secureConfirmPassword, setSecureConfirmPassword] = useState(true);
   const [rememberUser, setRememberUser] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   // form data
   const [username, setUsername] = useState('');
@@ -24,11 +28,37 @@ export default function SignUp({navigation}) {
   const [confirmPassword, setConfirmPassword] = useState('');
 
   function submitSignUp() {
+    setLoading(true);
+    fetch(
+      'https://todoapi-production-61ef.up.railway.app/api/v1/auth/register',
+      {
+        method: 'POST',
+        body: JSON.stringify({username, email, password, confirmPassword}),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      },
+    )
+      .then(response => response.json())
+      .then(json => {
+        setLoading(false);
+        if (json.status == 'success') {
+          rememberUser &&
+            EncryptedStorage.setItem(
+              'user_credential',
+              JSON.stringify({email, password}),
+            );
+          navigation.reset({
+            index: 0,
+            routes: [{name: 'Home', params: {token: json.user.token}}],
+          });
+        } else ToastAndroid.show(json.message, ToastAndroid.LONG);
+      })
+      .catch(error => {
+        setLoading(false);
+        console.log(error);
+      });
     console.log({username, email, password, confirmPassword});
-    navigation.reset({
-      index: 0,
-      routes: [{name: 'Home'}],
-    });
   }
 
   return (
@@ -140,7 +170,11 @@ export default function SignUp({navigation}) {
               {/* submit & register button */}
               <TouchableNativeFeedback useForeground onPress={submitSignUp}>
                 <View style={styles.btnSubmit}>
-                  <Text style={styles.textBtnTitle}>Daftar</Text>
+                  {loading ? (
+                    <ActivityIndicator color={'white'} />
+                  ) : (
+                    <Text style={styles.textBtnTitle}>Daftar</Text>
+                  )}
                 </View>
               </TouchableNativeFeedback>
               <Gap height={10} />
@@ -183,6 +217,7 @@ const styles = StyleSheet.create({
     elevation: 3,
     overflow: 'hidden',
     alignSelf: 'center',
+    justifyContent: 'center',
   },
   plainText: {
     color: 'white',
