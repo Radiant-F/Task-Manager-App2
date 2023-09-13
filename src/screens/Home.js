@@ -13,6 +13,8 @@ import {
   TextInput,
   TouchableOpacity,
   ActivityIndicator,
+  Alert,
+  ToastAndroid,
 } from 'react-native';
 import React, {useState, useEffect} from 'react';
 import {Background, Gap, UserData} from '../components';
@@ -80,7 +82,10 @@ export default function Home({route}) {
         if (json.status == 'success') {
           getTasks();
           setModalAddVisible(false);
-        } else console.log(json);
+        } else {
+          console.log(json);
+          ToastAndroid.show(json.message, ToastAndroid.LONG);
+        }
       })
       .catch(error => {
         setLoadingAdd(false);
@@ -90,16 +95,97 @@ export default function Home({route}) {
 
   const [modalEditVisible, setModalEditVisible] = useState(false);
   const closeModalEdit = () => setModalEditVisible(false);
+  const [loadingEdit, setLoadingEdit] = useState(false);
   const [editedTask, setEditedTask] = useState({
     title: '',
     desc: '',
     checked: null,
-    id: null,
+    _id: null,
   });
 
   function editTask() {
-    console.log(editedTask);
-    setModalEditVisible(false);
+    setLoadingEdit(true);
+    fetch(`${host}/todos/${editedTask._id}`, {
+      method: 'PUT',
+      body: JSON.stringify(editedTask),
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+    })
+      .then(response => response.json())
+      .then(json => {
+        setLoadingEdit(false);
+        if (json.status == 'success') {
+          getTasks();
+          setModalEditVisible(false);
+        } else console.log(json);
+      })
+      .catch(error => {
+        setLoadingEdit(false);
+        console.log(`ERROR: ${error}`);
+      });
+  }
+
+  function checklistTask(item) {
+    setLoading(true);
+    fetch(`${host}/todos/${item._id}`, {
+      method: 'PUT',
+      body: JSON.stringify({checked: !item.checked}),
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+    })
+      .then(response => response.json())
+      .then(json => {
+        if (json.status == 'success') {
+          getTasks();
+        } else {
+          setLoading(false);
+          console.log(json);
+        }
+      })
+      .catch(error => {
+        setLoading(false);
+        console.log(error);
+      });
+  }
+
+  function deleteTask(id) {
+    setLoading(true);
+    fetch(`${host}/todos/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+    })
+      .then(response => response.json())
+      .then(json => {
+        if (json.status == 'success') {
+          getTasks();
+        } else {
+          setLoading(false);
+          console.log(json);
+        }
+      })
+      .catch(error => {
+        setLoading(false);
+        console.log(error);
+      });
+  }
+
+  function confirmDelete(id) {
+    Alert.alert('Hapus', 'Hapus aktivitas?', [
+      {
+        text: 'Batal',
+      },
+      {
+        text: 'Hapus',
+        onPress: () => deleteTask(id),
+      },
+    ]);
   }
 
   return (
@@ -133,6 +219,7 @@ export default function Home({route}) {
                 <CheckBox
                   value={item.checked}
                   tintColors={{true: 'white', false: 'white'}}
+                  onValueChange={() => checklistTask(item)}
                 />
                 <Text style={styles.textItemTitle}>{item.title}</Text>
                 <TouchableNativeFeedback
@@ -152,12 +239,17 @@ export default function Home({route}) {
                 <View>
                   <Text style={styles.textDefault}>{item.desc}</Text>
                   <View style={styles.viewBtnOption}>
-                    <TouchableNativeFeedback useForeground>
+                    {/* button delete */}
+                    <TouchableNativeFeedback
+                      useForeground
+                      onPress={() => confirmDelete(item._id)}>
                       <View style={styles.btnDelete}>
                         <Icon name="trash-can" color={'white'} size={20} />
                       </View>
                     </TouchableNativeFeedback>
                     <Gap width={10} />
+
+                    {/* button edit */}
                     <TouchableNativeFeedback
                       useForeground
                       onPress={() => {
@@ -292,8 +384,8 @@ export default function Home({route}) {
                   placeholder="Deskripsi tugas.."
                   placeholderTextColor={'grey'}
                   style={styles.input}
-                  onChangeText={desc => setEditedTask({...editedTask, desc})}
                   value={editedTask.desc}
+                  onChangeText={desc => setEditedTask({...editedTask, desc})}
                 />
               </View>
 
@@ -302,7 +394,11 @@ export default function Home({route}) {
               {/* button submit */}
               <TouchableNativeFeedback useForeground onPress={editTask}>
                 <View style={styles.btnSubmitAdd}>
-                  <Text style={styles.textBtnTitle}>Ubah</Text>
+                  {loadingEdit ? (
+                    <ActivityIndicator color={'white'} />
+                  ) : (
+                    <Text style={styles.textBtnTitle}>Ubah</Text>
+                  )}
                 </View>
               </TouchableNativeFeedback>
             </View>
