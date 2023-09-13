@@ -58,7 +58,6 @@ export default function SignUp({navigation}) {
         setLoading(false);
         console.log(error);
       });
-    console.log({username, email, password, confirmPassword});
   }
 
   return (
