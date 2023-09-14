@@ -1,8 +1,16 @@
-import {StyleSheet, Text, View, StatusBar} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  StatusBar,
+  TouchableNativeFeedback,
+  Alert,
+} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import EncryptedStorage from 'react-native-encrypted-storage';
 
-export default function UserData({token}) {
+export default function UserData({token, navigation}) {
   const [userData, setUserData] = useState({
     username: 'User Name',
     avatar: {
@@ -30,18 +38,44 @@ export default function UserData({token}) {
   useEffect(() => {
     getUser();
   }, []);
+
+  function confirmSignOut() {
+    Alert.alert('Keluar?', 'Sesi Anda akan berakhir.', [
+      {
+        text: 'Batal',
+      },
+      {
+        text: 'Keluar',
+        onPress: () => {
+          EncryptedStorage.removeItem('user_credential')
+            .then(() => {
+              navigation.replace('SignIn');
+            })
+            .catch(error => {
+              console.log(error);
+            });
+        },
+      },
+    ]);
+  }
+
   return (
-    <View style={styles.viewProfile}>
-      <View>
-        <Text style={styles.textDefault}>Hi,</Text>
-        <Text style={styles.textUserName}>{userData.username}</Text>
+    <TouchableNativeFeedback onPress={confirmSignOut}>
+      <View style={styles.viewProfile}>
+        <View>
+          <Text style={styles.textDefault}>Hi,</Text>
+          <Text style={styles.textUserName}>{userData.username}</Text>
+        </View>
+        {userData.avatar.url == '' ? (
+          <Icon name="account-circle" color="white" size={50} />
+        ) : (
+          <Image
+            source={{uri: userData.avatar.url}}
+            style={styles.imgProfile}
+          />
+        )}
       </View>
-      {userData.avatar.url == '' ? (
-        <Icon name="account-circle" color="white" size={50} />
-      ) : (
-        <Image source={{uri: userData.avatar.url}} style={styles.imgProfile} />
-      )}
-    </View>
+    </TouchableNativeFeedback>
   );
 }
 
