@@ -20,6 +20,7 @@ import {
   ModalEditTask,
 } from '../components';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import axios from 'axios';
 
 if (Platform.OS === 'android') {
   if (UIManager.setLayoutAnimationEnabledExperimental) {
@@ -32,29 +33,27 @@ export default function Home({route, navigation}) {
   const host = 'https://todoapi-production-61ef.up.railway.app/api/v1';
   const [openDetail, setOpenDetail] = useState(null);
 
+  const instance = axios.create({
+    baseURL: 'https://todoapi-production-61ef.up.railway.app/api/v1',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`,
+    },
+  });
+
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  function getTasks() {
+  async function getTasks() {
     setLoading(true);
-    fetch(`${host}/todos`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
-      },
-    })
-      .then(response => response.json())
-      .then(json => {
-        setLoading(false);
-        if (json.status == 'success') {
-          setTasks(json.data.todos);
-        } else console.log(json);
-      })
-      .catch(error => {
-        setLoading(false);
-        console.log(error);
-      });
+    try {
+      const {data} = await instance.get('/todos');
+      setLoading(false);
+      setTasks(data.data.todos);
+    } catch (error) {
+      setLoading(false);
+      console.log(error.response.data);
+    }
   }
   useEffect(() => {
     getTasks();
@@ -66,31 +65,18 @@ export default function Home({route, navigation}) {
   const [title, setTitle] = useState('');
   const [desc, setDesc] = useState('');
 
-  function addTask() {
+  async function addTask() {
     setLoadingAdd(true);
-    fetch(`${host}/todos`, {
-      method: 'POST',
-      body: JSON.stringify({title, desc}),
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
-      },
-    })
-      .then(response => response.json())
-      .then(json => {
-        setLoadingAdd(false);
-        if (json.status == 'success') {
-          getTasks();
-          setModalAddVisible(false);
-        } else {
-          console.log(json);
-          ToastAndroid.show(json.message, ToastAndroid.LONG);
-        }
-      })
-      .catch(error => {
-        setLoadingAdd(false);
-        console.log(error);
-      });
+    try {
+      await instance.post('/todos', {title, desc});
+      setLoadingAdd(false);
+      getTasks();
+      setModalAddVisible(false);
+    } catch (error) {
+      setLoadingAdd(false);
+      console.log(error.response.data);
+      ToastAndroid.show(error.response.data.message, ToastAndroid.LONG);
+    }
   }
 
   const [modalEditVisible, setModalEditVisible] = useState(false);

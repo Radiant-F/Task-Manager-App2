@@ -2,41 +2,26 @@ import {Image, StyleSheet, Text, View} from 'react-native';
 import React, {useEffect} from 'react';
 import {Background} from '../components';
 import EncryptedStorage from 'react-native-encrypted-storage';
+import axios from 'axios';
 
 export default function SplashScreen({navigation}) {
+  async function refreshToken() {
+    try {
+      const value = await EncryptedStorage.getItem('user_credential');
+      const {data} = await axios.post(
+        'https://todoapi-production-61ef.up.railway.app/api/v1/auth/login',
+        JSON.parse(value),
+        {headers: {'Content-Type': 'application/json'}},
+      );
+      navigation.replace('Home', {token: data.user.token});
+    } catch (error) {
+      console.log(error);
+      navigation.replace('SignIn');
+    }
+  }
+
   useEffect(() => {
-    EncryptedStorage.getItem('user_credential', value => {
-      const credential = JSON.parse(value);
-      if (credential) {
-        fetch(
-          'https://todoapi-production-61ef.up.railway.app/api/v1/auth/login',
-          {
-            method: 'POST',
-            body: value,
-            headers: {
-              'Content-Type': 'application/json',
-            },
-          },
-        )
-          .then(response => response.json())
-          .then(json => {
-            if (json.status == 'success') {
-              navigation.replace('Home', {token: json.user.token});
-            } else {
-              console.log(json);
-              navigation.replace('SignIn');
-            }
-          })
-          .catch(error => {
-            console.log(error);
-            navigation.replace('SignIn');
-          });
-      } else {
-        setTimeout(() => {
-          navigation.replace('SignIn');
-        }, 3000);
-      }
-    });
+    refreshToken();
   }, []);
 
   return (

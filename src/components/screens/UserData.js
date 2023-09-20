@@ -5,6 +5,7 @@ import {
   StatusBar,
   TouchableNativeFeedback,
   Alert,
+  Image,
 } from 'react-native';
 import React, {useState, useEffect} from 'react';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
