@@ -10,6 +10,7 @@ import {
 import React, {useState, useEffect} from 'react';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import EncryptedStorage from 'react-native-encrypted-storage';
+import axios from 'axios';
 
 export default function UserData({token, navigation}) {
   const [userData, setUserData] = useState({
@@ -19,22 +20,21 @@ export default function UserData({token, navigation}) {
     },
   });
 
-  function getUser() {
-    fetch('https://todoapi-production-61ef.up.railway.app/api/v1/profile', {
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
-      },
-    })
-      .then(response => response.json())
-      .then(json => {
-        if (json.status == 'success') {
-          setUserData({...userData, ...json.user});
-        }
-      })
-      .catch(err => {
-        console.log(err);
-      });
+  async function getUser() {
+    try {
+      const response = await axios.get(
+        'https://todoapi-production-61ef.up.railway.app/api/v1/profile',
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`,
+          },
+        },
+      );
+      setUserData({...userData, ...response.data.user});
+    } catch (error) {
+      console.log(error);
+    }
   }
   useEffect(() => {
     getUser();
