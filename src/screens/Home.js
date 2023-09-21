@@ -21,6 +21,7 @@ import {
 } from '../components';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import axios from 'axios';
+import EncryptedStorage from 'react-native-encrypted-storage';
 
 if (Platform.OS === 'android') {
   if (UIManager.setLayoutAnimationEnabledExperimental) {
@@ -30,7 +31,6 @@ if (Platform.OS === 'android') {
 
 export default function Home({route, navigation}) {
   const token = route.params.token;
-  const host = 'https://todoapi-production-61ef.up.railway.app/api/v1';
   const [openDetail, setOpenDetail] = useState(null);
 
   const instance = axios.create({
@@ -40,6 +40,31 @@ export default function Home({route, navigation}) {
       Authorization: `Bearer ${token}`,
     },
   });
+
+  instance.interceptors.response.use(
+    response => {
+      return response;
+    },
+    async error => {
+      const originalRequest = error.config;
+
+      try {
+        if (error.response && error.response.data.message === 'jwt expired') {
+          const value = await EncryptedStorage.getItem('user_credential');
+          const response = await instance.post(
+            '/auth/login',
+            JSON.parse(value),
+          );
+          const token = response.data.user.token;
+          originalRequest.headers['Authorization'] = `Bearer ${token}`;
+          return instance(originalRequest);
+        }
+      } catch (error) {
+        return Promise.reject(error);
+      }
+      return Promise.reject(error);
+    },
+  );
 
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -52,7 +77,7 @@ export default function Home({route, navigation}) {
       setTasks(data.data.todos);
     } catch (error) {
       setLoading(false);
-      console.log(error.response.data);
+      // console.log('CATCH ERROR', error.response.data);
     }
   }
   useEffect(() => {
@@ -89,77 +114,42 @@ export default function Home({route, navigation}) {
     _id: null,
   });
 
-  function editTask() {
+  async function editTask() {
     setLoadingEdit(true);
-    fetch(`${host}/todos/${editedTask._id}`, {
-      method: 'PUT',
-      body: JSON.stringify(editedTask),
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
-      },
-    })
-      .then(response => response.json())
-      .then(json => {
-        setLoadingEdit(false);
-        if (json.status == 'success') {
-          getTasks();
-          setModalEditVisible(false);
-        } else console.log(json);
-      })
-      .catch(error => {
-        setLoadingEdit(false);
-        console.log(`ERROR: ${error}`);
-      });
+    try {
+      await instance.put(`/todos/${editedTask._id}`, editedTask);
+      setLoadingEdit(false);
+      getTasks();
+      setModalEditVisible(false);
+    } catch (error) {
+      setLoadingEdit(false);
+      if (error.response) {
+        console.log(error.response.data);
+        ToastAndroid.show(error.response.data.message, ToastAndroid.LONG);
+      } else console.log(error);
+    }
   }
 
-  function checklistTask(item) {
+  async function checklistTask(item) {
     setLoading(true);
-    fetch(`${host}/todos/${item._id}`, {
-      method: 'PUT',
-      body: JSON.stringify({checked: !item.checked}),
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
-      },
-    })
-      .then(response => response.json())
-      .then(json => {
-        if (json.status == 'success') {
-          getTasks();
-        } else {
-          setLoading(false);
-          console.log(json);
-        }
-      })
-      .catch(error => {
-        setLoading(false);
-        console.log(error);
-      });
+    try {
+      await instance.put(`/todos/${item._id}`, {checked: !item.checked});
+      getTasks();
+    } catch (error) {
+      setLoading(false);
+      console.log(error);
+    }
   }
 
-  function deleteTask(id) {
+  async function deleteTask(id) {
     setLoading(true);
-    fetch(`${host}/todos/${id}`, {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
-      },
-    })
-      .then(response => response.json())
-      .then(json => {
-        if (json.status == 'success') {
-          getTasks();
-        } else {
-          setLoading(false);
-          console.log(json);
-        }
-      })
-      .catch(error => {
-        setLoading(false);
-        console.log(error);
-      });
+    try {
+      await instance.delete(`/todos/${id}`);
+      getTasks();
+    } catch (error) {
+      setLoading(false);
+      console.log(error);
+    }
   }
 
   function confirmDelete(id) {
@@ -215,8 +205,9 @@ export default function Home({route, navigation}) {
         }}
       />
 
-      {/* button add */}
       <View style={styles.viewLine} />
+
+      {/* button add */}
       <TouchableNativeFeedback
         useForeground
         onPress={() => setModalAddVisible(true)}>
