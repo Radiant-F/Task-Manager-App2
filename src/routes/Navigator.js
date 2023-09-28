@@ -15,7 +15,7 @@ export default function Navigator() {
           statusBarTranslucent: true,
           headerShown: false,
         }}
-        initialRouteName="Counter">
+        initialRouteName="SplashScreen">
         <Stack.Screen component={SplashScreen} name="SplashScreen" />
         <Stack.Screen component={SignIn} name="SignIn" />
         <Stack.Screen component={SignUp} name="SignUp" />

@@ -3,17 +3,33 @@ import React, {useEffect} from 'react';
 import {Background} from '../components';
 import EncryptedStorage from 'react-native-encrypted-storage';
 import axios from 'axios';
+import {SetToken, SetUsername} from '../redux/slice/userSlice';
+import {useDispatch} from 'react-redux';
 
 export default function SplashScreen({navigation}) {
+  const dispatch = useDispatch();
+  const instance = axios.create({
+    baseURL: 'https://todoapi-production-61ef.up.railway.app/api/v1',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+
   async function refreshToken() {
     try {
       const value = await EncryptedStorage.getItem('user_credential');
-      const {data} = await axios.post(
-        'https://todoapi-production-61ef.up.railway.app/api/v1/auth/login',
+      const responseLogin = await instance.post(
+        '/auth/login',
         JSON.parse(value),
-        {headers: {'Content-Type': 'application/json'}},
       );
-      navigation.replace('Home', {token: data.user.token});
+      const token = responseLogin.data.user.token;
+      dispatch(SetToken(token));
+      const responseUserData = await instance.get('/profile', {
+        headers: {Authorization: `Bearer ${token}`},
+      });
+      const username = responseUserData.data.user.username;
+      dispatch(SetUsername(username));
+      navigation.replace('Home');
     } catch (error) {
       console.log(error);
       navigation.replace('SignIn');

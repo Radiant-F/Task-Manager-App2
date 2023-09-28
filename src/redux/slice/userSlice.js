@@ -6,4 +6,16 @@ const userSlice = createSlice({
     token: '',
     username: '',
   },
+  reducers: {
+    SetToken(state, action) {
+      state.token = action.payload;
+    },
+    SetUsername(state, action) {
+      state.username = action.payload;
+    },
+  },
 });
+
+export const {SetToken, SetUsername} = userSlice.actions;
+
+export default userSlice.reducer;
